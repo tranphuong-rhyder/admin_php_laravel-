@@ -22,6 +22,9 @@ Route::get('/logout', 'LoginController@logout')->name('logout');
 // Route::group(['prefix' => '/admin'], function () {
     Route::prefix('admin')->middleware('login')->group(function() {
     Route::get('/', 'HomeController@index')->name('admin');
+    // User
     Route::get('/user', 'UsersController@getUser')->name('user');
+    Route::post('/user/{id}', 'UsersController@editUser')->name('user.edit');
+
 });
 

@@ -105,12 +105,14 @@
                             <td class="text-center" style="width: 15%">{{$user->status_str}}</td>
                             <td class="text-center" style="width: 10%">{{$user->gender_str}}</td>
                             <td class="text-center d-flex align-items-center mt-0" style="width: 15%">
-                                <a href="" class="btn btn-alt-danger mr-5">
-                                    <i class="fa fa-eye"></i>
-                                </a>
-                                <button class="btn btn-alt-primary" data-toggle="" title="Chỉnh sửa" data-target="">
+                                <button class="btn btn-alt-danger mr-5" title="Xóa" data-toggle="modal" data-target="#delete_{{$user->id}}" data-whatever="@fat">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                                @include('admin.layouts.modal.modal_delete')
+                                <button class="btn btn-alt-primary" title="Chỉnh sửa" data-toggle="modal" data-target="#update_{{$user->id}}" data-whatever="@fat">
                                     <i class="fa fa-edit"></i>
                                 </button>
+                                @include('admin.layouts.modal.modal_edit')
                             </td>
                         </tr>
                     @endforeach
@@ -123,3 +125,5 @@
     </main>
     <!-- END Main Container -->
 @endsection
+
+

@@ -32,7 +32,7 @@
     {{-- <link rel="stylesheet" href="{{asset('assets/css/style-admin.css')}}"> --}}
 </head>
 <body>
-    <div id="page-container" class="sidebar-o enable-page-overlay side-scroll page-header-modern main-content-boxed sidebar_style_inverse_on">
+    <div id="page-container" class="sidebar-o sidebar-inverse enable-page-overlay side-scroll page-header-modern main-content-boxed side-trans-enabled">
         @include('admin.includes.sidebar')
 
         @include('admin.includes.header')
@@ -41,10 +41,9 @@
 
         @include('admin.includes.footer')
     </div>
+
     <script src="{{ asset('assets/js/codebase.core.min.js')}}"></script>
 
     <script src="{{ asset('assets/js/codebase.app.min.js')}}"></script>
-
-
 </body>
 </html>
