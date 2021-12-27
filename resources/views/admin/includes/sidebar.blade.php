@@ -378,7 +378,7 @@
                 <li class="">
                     <a class="nav-submenu" data-toggle="nav-submenu" href="javascript:void(0)">
                         <i class="si si-note"></i>
-                        <span class="sidebar-mini-hide">Forms</span>
+                        <span class="sidebar-mini-hide">User</span>
                     </a>
                     <ul>
                         <li>

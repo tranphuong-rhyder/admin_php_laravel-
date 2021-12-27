@@ -47,7 +47,20 @@
         <!-- Page Content -->
         <div class="content">
             <!-- Material Design -->
-            <h2 class="content-heading">User Table</h2>
+            <div class="d-flex align-items-center">
+                <div class="col-md-6 pr-10">
+                    <h2 class="content-heading">User Table</h2>
+                </div>
+                <div class="col-md-6">
+                    <div class="pull-right">
+                        <a href="{{asset('admin/add')}}"  class="btn btn-bk btn-primary-bk btnSearch mr-5" data-toggle="modal" data-target="#addUser">
+                            Add new user
+                        </a>
+                    </div>
+                </div>
+                {{-- @include('admin.layouts.modal.modal_addUser') --}}
+            </div>
+
             <form class="" action="" method="get" >
                 @csrf
                 <div class="form-group row">
@@ -122,6 +135,7 @@
             {{ $users->links() }}
         </div>
         <!-- END Page Content -->
+        @include('admin.layouts.modal.modal_addUser')
     </main>
     <!-- END Main Container -->
 @endsection

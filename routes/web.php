@@ -25,6 +25,7 @@ Route::get('/logout', 'LoginController@logout')->name('logout');
     // User
     Route::get('/user', 'UsersController@getUser')->name('user');
     Route::post('/user/{id}', 'UsersController@editUser')->name('user.edit');
+    Route::post('/add', 'UsersController@addUser')->name('user.add');
 
 });
 
